@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>تفاصيل المنتج | AuraCart</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body>
+    <header>
+        <div class="container">
+            <a href="index.html" class="logo">AuraCart</a>
+            <div class="header-actions">
+                <button class="cart-btn">
+                    <i class="fas fa-shopping-bag"></i>
+                    <span class="cart-counter">0</span>
+                </button>
+            </div>
+        </div>
+    </header>
+
+    <main id="product-details-content" class="container">
+        <!-- تفاصيل المنتج ستعرض هنا بواسطة JavaScript -->
+    </main>
+
+    <!-- Cart Sidebar -->
+    <aside class="cart-sidebar">
+        <div class="cart-header">
+            <h3>عربة التسوق</h3>
+            <button class="close-cart-btn">×</button>
+        </div>
+        <div class="cart-body"></div>
+        <div class="cart-footer">
+            <div class="cart-total">
+                <span>الإجمالي:</span>
+                <span class="total-price">0.00 ر.س</span>
+            </div>
+            <button class="checkout-btn">إتمام الشراء</button>
+        </div>
+    </aside>
+    <div class="overlay"></div>
+
+    <script src="cart.js"></script>
+    <script src="product.js"></script>
+</body>
+</html>
