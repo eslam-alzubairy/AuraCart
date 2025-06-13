@@ -63,7 +63,7 @@ header .container { display: flex; justify-content: space-between; align-items: 
 
 /* Cart Sidebar */
 .cart-sidebar {
-    position: fixed; top: 0; left: -400px; /* Start hidden on the left */
+    position: fixed; top: 0; left: -400px; 
     width: 400px; height: 100%; background-color: #fff;
     box-shadow: 0 0 20px rgba(0,0,0,0.2); z-index: 1001;
     display: flex; flex-direction: column;
@@ -112,4 +112,29 @@ header .container { display: flex; justify-content: space-between; align-items: 
     #product-details-content { grid-template-columns: 1fr; }
     .cart-sidebar { width: 90%; left: -100%; }
     .cart-sidebar.open { left: 0; }
+}
+.icon-saudi_riyal {
+  font-family: 'saudi_riyal'; 
+  font-size: 1em;
+  vertical-align: middle;
+  margin-left: 4px;
+}
+.notification {
+  position: fixed;
+  top: 20px;
+  right: 20px;
+  background-color: #4BB543; /* لون أخضر للتأكيد */
+  color: white;
+  padding: 12px 20px;
+  border-radius: 6px;
+  font-size: 16px;
+  opacity: 0;
+  pointer-events: none;
+  transition: opacity 0.4s ease;
+  z-index: 9999;
+}
+
+.notification.show {
+  opacity: 1;
+  pointer-events: auto;
 }

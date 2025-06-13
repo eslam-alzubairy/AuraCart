@@ -1,3 +1,13 @@
+
+function showNotification(message) {
+    const notification = document.getElementById('notification');
+    notification.textContent = message;
+    notification.classList.add('show');
+
+    setTimeout(() => {
+        notification.classList.remove('show');
+    }, 2500);
+}
 // --- Cart State & DOM Elements ---
 let cart = JSON.parse(localStorage.getItem('auraCart')) || [];
 const cartSidebar = document.querySelector('.cart-sidebar');
@@ -22,7 +32,9 @@ const addToCart = (productId, product) => {
     }
     saveCart();
     renderCart();
-    openCart();
+    // openCart();
+    showNotification(`تمت إضافة "${product.name}" إلى السلة!`);
+
 };
 
 const updateQuantity = (productId, newQuantity) => {
@@ -56,7 +68,9 @@ const renderCart = () => {
                     <img src="${item.images[0]}" alt="${item.name}" class="cart-item-image">
                     <div class="cart-item-info">
                         <p class="cart-item-name">${item.name}</p>
-                        <p class="cart-item-price">${item.price.toFixed(2)} ر.س</p>
+                        <p class="cart-item-price">
+                            <span class="icon-saudi_riyal"></span> ${item.price.toFixed(2)}
+                        </p>
                         <div class="cart-item-actions">
                             <button class="quantity-btn decrease-btn">-</button>
                             <span class="item-quantity">${item.quantity}</span>
@@ -77,7 +91,8 @@ const updateCartInfo = () => {
     const totalPrice = cart.reduce((sum, item) => sum + (item.price * item.quantity), 0);
     
     cartCounter.textContent = totalItems;
-    totalPriceEl.textContent = `${totalPrice.toFixed(2)} ر.س`;
+    totalPriceEl.innerHTML = `<span class="icon-saudi_riyal"></span> ${totalPrice.toFixed(2)}`;
+;
 };
 
 // --- UI Interaction Functions ---

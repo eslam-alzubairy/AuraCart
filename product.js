@@ -39,7 +39,9 @@ document.addEventListener('DOMContentLoaded', async () => {
             <div class="product-details-info">
                 <p class="category">${product.category}</p>
                 <h1 class="name">${product.name}</h1>
-                <p class="price">${product.price.toFixed(2)} ر.س</p>
+                <p class="price">
+                    <span class="icon-saudi_riyal"></span> ${product.price.toFixed(2)}
+                </p>
                 <p class="description">${product.description}</p>
                 <button class="add-to-cart-btn" data-id="${product.id}">أضف إلى السلة</button>
             </div>

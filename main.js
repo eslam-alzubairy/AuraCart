@@ -27,8 +27,10 @@ document.addEventListener('DOMContentLoaded', () => {
                         <div class="product-info">
                             <p class="product-category">${product.category}</p>
                             <h3 class="product-name">${product.name}</h3>
-                            <p class="product-price">${product.price.toFixed(2)} ر.س</p>
-                        </div>
+                            <p class="product-price">
+                                <span class="icon-saudi_riyal"></span> ${product.price.toFixed(2)}
+                            </p>        
+                </div>
                     </a>
                     <button class="add-to-cart-btn">أضف إلى السلة</button>
                 </div>

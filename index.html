@@ -5,7 +5,9 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>AuraCart | تسوق الأناقة</title>
     <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@emran-alhaddad/saudi-riyal-font/index.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+
 </head>
 <body>
     <header>
@@ -34,7 +36,6 @@
         </section>
         
         <section id="product-grid" class="product-grid">
-            <!-- المنتجات ستعرض هنا بواسطة JavaScript -->
         </section>
     </main>
 
@@ -50,7 +51,10 @@
         <div class="cart-footer">
             <div class="cart-total">
                 <span>الإجمالي:</span>
-                <span class="total-price">0.00 ر.س</span>
+                <span class="total-price">
+                    <span class="icon-saudi_riyal"></span> 0.00
+                </span>
+
             </div>
             <button class="checkout-btn">إتمام الشراء</button>
         </div>
@@ -60,5 +64,8 @@
 
     <script src="cart.js"></script>
     <script src="main.js"></script>
+    
+    <div id="notification" class="notification"></div>
+
 </body>
 </html>
